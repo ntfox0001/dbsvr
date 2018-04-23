@@ -1,10 +1,11 @@
 package database
 
 import (
-	"blockchainproj/dbsvr/config"
-	"blockchainproj/dbsvr/dberror"
 	"database/sql"
 	"fmt"
+
+	"github.com/ntfox0001/dbsvr/config"
+	"github.com/ntfox0001/dbsvr/dberror"
 
 	_ "github.com/go-sql-driver/mysql"
 	log "github.com/inconshreveable/log15"

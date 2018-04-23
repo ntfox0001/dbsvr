@@ -1,9 +1,10 @@
 package main
 
 import (
-	"blockchainproj/dbsvr/config"
-	"blockchainproj/dbsvr/database"
 	"fmt"
+
+	"github.com/ntfox0001/dbsvr/config"
+	"github.com/ntfox0001/dbsvr/database"
 
 	"github.com/ethereum/go-ethereum/log"
 )
