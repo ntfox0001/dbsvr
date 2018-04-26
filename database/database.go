@@ -80,6 +80,7 @@ func (d *Database) ExecOperation(op *DataOperation) (<-chan *DataResult, error) 
 
 func (d *Database) Close() {
 	d.quitCh <- struct{}{}
+	d.sqldb.Close()
 }
 
 func (d *Database) run() {

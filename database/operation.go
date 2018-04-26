@@ -3,7 +3,6 @@ package database
 import (
 	"container/list"
 	"database/sql"
-	"fmt"
 
 	"github.com/ntfox0001/dbsvr/dberror"
 
@@ -84,7 +83,6 @@ func (d *DataOperation) exec(db *sql.DB) error {
 }
 
 func (d *DataOperation) callData(opt dbOperation) {
-	fmt.Println(d.args)
 	if row, err := opt.Query(d.sql, d.args...); err != nil {
 		d.resultOptCh <- &DataResult{
 			opt:    d,
