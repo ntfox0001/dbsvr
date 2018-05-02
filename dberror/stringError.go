@@ -1,13 +1,13 @@
 package dberror
 
 type StringError struct {
-	errorStr string
+	errStr string
 }
 
 func (ce StringError) Error() string {
-	return ce.errorStr
+	return ce.errStr
 }
 
 func NewStringErr(str string) StringError {
-	return StringError{errorStr: str}
+	return StringError{errStr: str}
 }
