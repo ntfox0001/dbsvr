@@ -34,8 +34,10 @@ func NewServer(ip string, port uint) *Server {
 func (s *Server) Start() {
 	addr := fmt.Sprintf("%s:%d", s.ip, s.port)
 	s.server = &http.Server{Addr: addr, Handler: s.router}
+
 	go func() {
 		go s.server.ListenAndServe()
+
 		<-s.quitCh
 
 		if err := s.server.Shutdown(context.Background()); err != nil {
